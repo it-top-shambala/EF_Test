@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using EF_Test.DB_Lib;
+using EF_Test.Model;
 
 namespace EF_Test.App
 {
@@ -11,14 +12,14 @@ namespace EF_Test.App
             var db = new PersonsDb();
             var persons = db.TablePersons;
 
-            /*db.TablePersons.Add(new Person
+            db.TablePersons.Add(new Person
             {
                 FirstName = "Anonim",
                 LastName = "Anonimus",
                 Age = 0,
                 IsDelete = true
             });
-            db.SaveChanges();*/
+            db.SaveChanges();
             
             foreach (var p in persons.ToList())
             {
